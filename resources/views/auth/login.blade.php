@@ -46,14 +46,13 @@
                             <!-- Username -->
                             <div class="mb-3">
                                 <label for="email" class="form-label">{{ __('Email Address') }}</label>
-                                <input id="email" type="email"
-                                    class="form-control @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                                    name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                             <!-- Password -->
@@ -64,16 +63,16 @@
                                     required autocomplete="current-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                             <!-- Checkbox -->
                             <div class="d-lg-flex justify-content-between align-items-center                  mb-4">
                                 <div class="form-check custom-checkbox">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                        {{ old('remember') ? 'checked' : '' }}>
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{
+                                        old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
@@ -88,7 +87,6 @@
                                         {{ __('Login') }}
                                     </button>
                                 </div>
-<input type="month">
                                 <div class="d-md-flex justify-content-between mt-4">
                                     <div class="mb-2 mb-md-0">
                                         <a href="{{ route('register') }}" class="fs-5">Create An
@@ -96,9 +94,8 @@
                                     </div>
                                     <div>
                                         @if (Route::has('password.request'))
-                                            <a href="{{ route('password.request') }}"
-                                                class="text-inherit
-                        fs-5">{{ __('Forgot Your Password?') }}</a>
+                                        <a href="{{ route('password.request') }}"
+                                            class="text-inherit  fs-5">{{__('Forgot Your Password?') }}</a>
                                         @endif
                                     </div>
 
@@ -122,7 +119,8 @@
     <script src="{{ URL::asset('admin') }}/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
     <script src="{{ URL::asset('admin') }}/assets/libs/dropzone/dist/min/dropzone.min.js"></script>
     <script src="{{ URL::asset('admin') }}/assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
-    <script src="{{ URL::asset('admin') }}/assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js">
+    <script
+        src="{{ URL::asset('admin') }}/assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js">
     </script>
 
 
