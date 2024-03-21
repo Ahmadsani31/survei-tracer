@@ -1,6 +1,6 @@
 <ul class="navbar-nav flex-column" id="sideNavbar">
     <li class="nav-item">
-        <a class="nav-link has-arrow  active " href="{{ asset('admin/') }}index.html">
+        <a class="nav-link has-arrow  active " href="{{ url('/admin/dashboard') }}">
             <i data-feather="home" class="nav-icon icon-xs me-2"></i> Dashboard
         </a>
 
@@ -18,42 +18,21 @@
         <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse" data-bs-target="#navPages"
             aria-expanded="false" aria-controls="navPages">
             <i data-feather="layers" class="nav-icon icon-xs me-2">
-            </i> Pages
+            </i> Survei
         </a>
 
         <div id="navPages" class="collapse " data-bs-parent="#sideNavbar">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ asset('admin/') }}pages/profile.html">
-                        Profile
+                    <a class="nav-link " href="{{ url('/admin/survei') }}">
+                        Survei
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link has-arrow   " href="{{ asset('admin/') }}pages/settings.html">
-                        Settings
+                    <a class="nav-link has-arrow " href="{{ url('/') }}">
+                        Soal
                     </a>
 
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ asset('admin/') }}pages/billing.html">
-                        Billing
-                    </a>
-                </li>
-
-
-
-
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ asset('admin/') }}pages/pricing.html">
-                        Pricing
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ asset('admin/') }}pages/404-error.html">
-                        404 Error
-                    </a>
                 </li>
             </ul>
         </div>

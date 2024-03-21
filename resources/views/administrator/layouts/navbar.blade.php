@@ -110,7 +110,7 @@
 
 
                         <div class="lh-1 ">
-                            <h5 class="mb-1"> John E. Grainger</h5>
+                            <h5 class="mb-1">{{ Auth::user()->name }}</h5>
                             <a href="#" class="text-inherit fs-6">View my profile</a>
                         </div>
                         <div class=" dropdown-divider mt-3 mb-2"></div>
@@ -119,34 +119,15 @@
                     <ul class="list-unstyled">
 
                         <li>
-                            <a class="dropdown-item" href="#">
-                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>Edit
-                                Profile
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>Activity Log
+
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>{{ __('Logout') }}
                             </a>
 
-
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item text-primary" href="#">
-                                <i class="me-2 icon-xxs text-primary dropdown-item-icon" data-feather="star"></i>Go Pro
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>Account Settings
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ url('admin/dashboard') }}">
-                                <i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>Sign
-                                Out
-                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
 
